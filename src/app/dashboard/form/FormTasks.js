@@ -56,11 +56,6 @@ export default function FormTasks({ task, closeForm, clearEditTask }) {
           title="Adicionar subtarefa"
         />
       </div>
-      {/* <ul>
-        {subTasks.map((subTask, index) => (
-          <li key={index}>{subTask}</li>
-        ))}
-      </ul> */}
       <ul>
         {subTasks.map((subTask, index) => (
           <li key={index}>
