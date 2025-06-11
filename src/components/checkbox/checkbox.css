@@ -1,0 +1,4 @@
+.checkbox {
+  @apply border border-[#242323]
+        cursor-pointer;
+}
