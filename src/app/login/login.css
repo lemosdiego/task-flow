@@ -1,0 +1,71 @@
+.login-page {
+  @apply border-2 border-black
+        flex
+        flex-col
+        justify-center
+        items-center
+        h-screen
+        relative;
+}
+.img {
+  @apply w-[400px]
+        absolute
+        right-96
+        bottom-20;
+}
+
+.form-container {
+  @apply bg-[#60A5FA]
+        flex
+        flex-col
+        justify-center
+        items-center
+        rounded-md
+        shadow-lg
+        xl:p-10 xl:w-[400px];
+}
+.form-container h2 {
+  @apply xl:text-3xl xl:font-black;
+}
+.form {
+  @apply flex
+        flex-col
+        xl:gap-2 xl:mt-4 xl:w-full;
+}
+
+.form button {
+  @apply bg-[#2563EB]
+        text-[#F9FAFB]
+        hover:bg-[#1D4ED8]
+        h-10
+        rounded-md;
+}
+
+.form-input {
+  @apply bg-[#F9FAFB] 
+        p-2
+        h-10
+        outline-none
+        rounded-md;
+}
+
+.input-icon-wrapper {
+  @apply relative;
+}
+.with-icon {
+  @apply relative w-full;
+}
+.input-icon {
+  @apply absolute
+        top-1/2
+        right-2
+        transform
+        -translate-y-1/2
+        z-20;
+}
+
+.link {
+  @apply text-[#2563EB]
+        hover:text-[#1D4ED8]
+        font-semibold;
+}
