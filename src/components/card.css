@@ -81,3 +81,7 @@
 .icon-action {
   @apply text-xl;
 }
+
+.checked {
+  @apply bg-[#39ff14];
+}
