@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input::placeholder,
+textarea::placeholder {
+  @apply text-[#242323]
+        text-sm;
+}
