@@ -126,16 +126,21 @@ Siga os passos abaixo para instalar e executar o Task Flow na sua máquina local
 ### 1. Clone o repositório
 
 ````bash
+### 1. Clone o repositório
 git clone https://github.com/seu-usuario/task-flow.git
-### 2. Navegue até a pasta do projeto
 
+### 2. Navegue até a pasta do projeto
 ```bash
 cd task-flow
-### 3. Instale as dependências
 
+### 3. Instale as dependências
 ```bash
 npm install
+
 ### 4. Crie o Supabase
+```bash
+npm install supabase
+##Configure o client do supabase
 
 ```bash
 npm run dev
