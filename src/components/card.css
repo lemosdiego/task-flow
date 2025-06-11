@@ -1,0 +1,83 @@
+.card {
+  background: linear-gradient(135deg, #4b87ff, #3a6ddf, #2b56c0);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  @apply relative
+        flex
+        flex-col
+        justify-center
+        rounded-lg
+        xl:p-5 xl:gap-2;
+}
+
+.card-title {
+  @apply text-white 
+        font-semibold 
+        xl:text-xl;
+}
+
+.card-description {
+  @apply text-white 
+        text-base;
+}
+.card-subtasks {
+  @apply flex
+        flex-col
+        xl:gap-1;
+}
+
+.card-subtasks li {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  @apply p-2
+        flex
+        items-center
+        justify-between
+        text-sm
+        relative;
+}
+
+.card-actions {
+  @apply flex 
+        items-center
+        justify-end
+        absolute
+        right-4
+        top-4
+        gap-2;
+}
+
+.icon-card-actions {
+  @apply text-2xl
+        shadow-2xl
+        font-black;
+}
+.checkbox {
+  @apply w-4
+        h-4
+        rounded-full;
+}
+
+.task-create {
+  background: linear-gradient(135deg, #4b87ff, #3a6ddf, #2b56c0);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  @apply w-full
+        h-11
+        p-2
+        relative
+        flex
+        items-center
+        text-sm
+        rounded;
+}
+.task-actions {
+  @apply absolute 
+        right-2
+        top-1/2
+        -translate-y-1/2
+        flex
+        items-center
+        justify-center
+        gap-2;
+}
+.icon-action {
+  @apply text-xl;
+}
