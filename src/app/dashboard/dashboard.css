@@ -1,0 +1,50 @@
+.dashboard-page {
+  @apply bg-[#1c2125]
+        text-[#F9FAFB]
+        flex
+        items-center
+        justify-center
+        xl:p-4 xl:gap-2 xl:min-h-screen;
+}
+
+.container-task {
+  background: linear-gradient(135deg, #152651, #4b87ff, #5f00a9);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  @apply xl:w-1/4 
+        h-[90vh]
+        rounded-lg
+        flex
+        flex-col
+        xl:p-8 xl:gap-2;
+}
+
+.container-card-task {
+  background: linear-gradient(135deg, #152651, #4b87ff, #5f00a9);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  @apply p-8
+        rounded-lg
+        xl:w-4/6 h-[90vh];
+}
+
+.tasks-list {
+  @apply grid
+        xl:grid-cols-2 xl:gap-4;
+}
+
+.new-task-button {
+  background: linear-gradient(135deg, #4b87ff, #3a6ddf, #2b56c0);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  @apply w-full
+        flex
+        rounded
+        justify-between
+        xl:p-3;
+}
+
+.icon {
+  @apply bg-[#39ff14]
+        rounded-full 
+        w-7 
+        p-1 
+        h-7;
+}

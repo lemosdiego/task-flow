@@ -1,0 +1,63 @@
+.form-new-task {
+  background: linear-gradient(135deg, #4b87ff, #3a6ddf, #2b56c0);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  @apply flex 
+        flex-col
+        shadow-md
+        rounded
+        xl:gap-2 xl:p-5;
+}
+
+.box-1 {
+  @apply flex
+        flex-col
+        xl:gap-3;
+}
+
+.box-2 {
+  @apply grid
+          grid-cols-2
+          xl:gap-2;
+}
+
+.box-3 {
+  @apply flex 
+        relative;
+}
+
+.task-inputs {
+  @apply bg-[#1e90ff] 
+      text-[#F9FAFB]
+        p-2
+        w-full
+        rounded-sm
+        xl:h-11
+        outline-none;
+}
+
+.task-textarea {
+  @apply bg-[#1e90ff] 
+      resize-none
+        p-2
+        outline-none
+        rounded-sm
+        xl:h-20;
+}
+
+.icon-form {
+  @apply rounded-full bg-[#39ff14]
+        w-6 
+        h-6
+        p-1 
+        absolute
+        right-2
+        top-1/2
+        -translate-y-1/2
+        cursor-pointer;
+}
+
+.btn-submit {
+  @apply bg-[#09b3f7]
+        h-11
+        rounded-sm;
+}
