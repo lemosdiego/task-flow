@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 export function useFormVisibility() {
   const [showForm, setShowForm] = useState(false);
 
-  const formRef = useRef(null); // sem tipagem TypeScript
+  const formRef = useRef(null);
 
   const openForm = () => setShowForm(true);
   const closeForm = () => setShowForm(false);

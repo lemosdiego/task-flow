@@ -3,8 +3,10 @@
 import { useState } from "react";
 import "./card.css";
 import { HiPencilSquare } from "react-icons/hi2";
+import { IoMdTrash } from "react-icons/io";
+import CheckBox from "./checkbox/CheckBox";
 
-export default function CardTasks({ task, onEdit }) {
+export default function CardTasks({ task, onEdit, onDelete }) {
   const [completedSubTasks, setCompletedSubTasks] = useState(
     Array(task.subtasks.length).fill(false)
   );
@@ -26,23 +28,24 @@ export default function CardTasks({ task, onEdit }) {
             className="card-subtas-item"
             style={{
               textDecoration: completedSubTasks[index]
-                ? "line-through"
+                ? "line-through #39ff14 3px"
                 : "none",
             }}
           >
             <span>{item}</span>
-            <span
+            <CheckBox
               onClick={() => toggleCompleted(index)}
-              className="mark-complete"
-            >
-              {completedSubTasks[index] ? "desfazer" : "completo"}
-            </span>
+              className={completedSubTasks[index] ? "checked" : ""}
+            />
           </li>
         ))}
       </ul>
       <div className="card-actions">
         <button className="edit-button" onClick={onEdit}>
           <HiPencilSquare className="icon-action text-[#39ff14]" />
+        </button>
+        <button className="delete-button" onClick={() => onDelete(task.id)}>
+          <IoMdTrash className="icon-card-actions text-[#FF5252]" />
         </button>
       </div>
     </div>
