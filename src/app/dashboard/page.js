@@ -9,6 +9,7 @@ import { useFormVisibility } from "@/hooks/useFormVisibility";
 import { AiOutlinePlus } from "react-icons/ai";
 import { useDeleteTask } from "@/hooks/useDeleteTask";
 import { useState } from "react";
+import { useDeleteSubTask } from "@/hooks/useDeleteSubTask";
 
 export default function Dashboard() {
   const { tasks, getTasks } = useGetTasks();
@@ -17,6 +18,9 @@ export default function Dashboard() {
 
   // Estado local para controlar a tarefa em edição (ou null para nova)
   const [editingTask, setEditingTask] = useState(null);
+
+  //deletar subtarefa
+  const { deleteSubTask } = useDeleteSubTask(getTasks);
 
   // Abre formulário para editar a tarefa passada
   const handleEdit = (task) => {
@@ -63,6 +67,9 @@ export default function Dashboard() {
             task={task}
             onEdit={() => handleEdit(task)}
             onDelete={() => handleDelete(task.id)}
+            onDeleteSubTask={(taskId, subTaskIndex) =>
+              deleteSubTask(taskId, subTaskIndex)
+            }
           />
         ))}
       </div>
@@ -74,6 +81,7 @@ export default function Dashboard() {
               key={task.id}
               task={task}
               onEdit={() => handleEdit(task)}
+              onDelete={() => handleDelete(task.id)}
             />
           ))}
         </div>

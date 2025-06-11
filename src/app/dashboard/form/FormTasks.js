@@ -1,6 +1,7 @@
 import { useSaveTasks } from "@/hooks/useSaveTasks";
 import { AiOutlinePlus } from "react-icons/ai";
 import "./form.css";
+import { IoMdTrash } from "react-icons/io";
 
 export default function FormTasks({ task, closeForm, clearEditTask }) {
   const {
@@ -55,11 +56,39 @@ export default function FormTasks({ task, closeForm, clearEditTask }) {
           title="Adicionar subtarefa"
         />
       </div>
-      <ul>
+      {/* <ul>
         {subTasks.map((subTask, index) => (
           <li key={index}>{subTask}</li>
         ))}
+      </ul> */}
+      <ul>
+        {subTasks.map((subTask, index) => (
+          <li key={index}>
+            <input
+              className="task-inputs"
+              type="text"
+              value={subTask}
+              onChange={(e) => {
+                const newSubTasks = [...subTasks];
+                newSubTasks[index] = e.target.value;
+                setSubTasks(newSubTasks);
+              }}
+            />
+            <button
+              type="button"
+              className="delete-subtask-button"
+              onClick={() => {
+                const newSubTasks = subTasks.filter((_, i) => i !== index);
+                setSubTasks(newSubTasks);
+              }}
+              title="Deletar subtarefa"
+            >
+              <IoMdTrash className="icon-card-subtask text-[#FF5252]" />
+            </button>
+          </li>
+        ))}
       </ul>
+
       <button type="submit" className="btn-submit">
         {task ? "Salvar Edição" : "Adicionar Tarefa"}
       </button>

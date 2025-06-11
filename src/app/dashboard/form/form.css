@@ -61,3 +61,19 @@
         h-11
         rounded-sm;
 }
+
+form ul {
+  @apply flex
+        flex-col
+        gap-2;
+}
+
+form ul li {
+  @apply bg-[#1e90ff] 
+        flex;
+}
+
+.icon-card-subtask {
+  @apply mr-3
+        text-xl;
+}
